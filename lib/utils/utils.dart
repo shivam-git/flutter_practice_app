@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-final kHintTextStyle = TextStyle(color: Colors.white54, fontFamily: 'OpenSans');
+final kHintTextStyle = GoogleFonts.openSans(color: Colors.white54,);
 
-final kLabelStyle = TextStyle(
-    color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'OpenSans', fontSize: 12.0);
+final kLabelStyle = GoogleFonts.openSans(
+    color: Colors.white, fontWeight: FontWeight.bold,  fontSize: 12.0);
 
 final kBoxDecorations = BoxDecoration(
     color: Color(0xFF6CA8F1),

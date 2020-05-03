@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_app/models/pet_model.dart';
 import 'package:flutter_practice_app/screens/adopt_pet_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -24,8 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Center(
           child: Text(
             category,
-            style: TextStyle(
-                fontFamily: 'Montserrat',
+            style: GoogleFonts.montserrat(
                 fontSize: 14.0,
                 fontWeight: FontWeight.w600,
                 color: Colors.black),
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 40.0),
             child: TextField(
-              style: TextStyle(fontSize: 22.0, fontFamily: 'Montserrat'),
+              style: GoogleFonts.montserrat(fontSize: 22.0, ),
               decoration: InputDecoration(
                 border: InputBorder.none,
                 prefixIcon: Padding(
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 labelText: 'Location',
-                labelStyle: TextStyle(fontSize: 20.0, color: Colors.grey),
+                labelStyle: GoogleFonts.montserrat(fontSize: 20.0, color: Colors.grey),
                 contentPadding: EdgeInsets.only(bottom: 20.0),
               ),
             ),
@@ -139,8 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: <Widget>[
                         Text(
                           pets[0].name,
-                          style: TextStyle(
-                              fontFamily: 'Montserrat',
+                          style: GoogleFonts.montserrat(
                               fontSize: 24.0,
                               fontWeight: FontWeight.bold),
                         ),
@@ -157,8 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: EdgeInsets.fromLTRB(12.0, 0.0, 40.0, 12.0),
                     child: Text(
                       pets[0].description,
-                      style: TextStyle(
-                          fontFamily: 'Montserrat',
+                      style: GoogleFonts.montserrat(
                           fontSize: 16.0,
                           color: Colors.grey),
                     ),
@@ -198,8 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: <Widget>[
                         Text(
                           pets[1].name,
-                          style: TextStyle(
-                              fontFamily: 'Montserrat',
+                          style: GoogleFonts.montserrat(
                               fontSize: 24.0,
                               fontWeight: FontWeight.bold),
                         ),
@@ -216,8 +213,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: EdgeInsets.fromLTRB(12.0, 0.0, 40.0, 12.0),
                     child: Text(
                       pets[1].description,
-                      style: TextStyle(
-                          fontFamily: 'Montserrat',
+                      style: GoogleFonts.montserrat(
                           fontSize: 16.0,
                           color: Colors.grey),
                     ),

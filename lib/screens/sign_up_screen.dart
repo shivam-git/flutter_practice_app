@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_app/screens/login_screen.dart';
 import 'package:flutter_practice_app/utils/utils.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -27,7 +28,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             height: 60.0,
             child: TextField(
               keyboardType: TextInputType.text,
-              style: TextStyle(color: Colors.white, fontFamily: 'OpenSans'),
+              style: GoogleFonts.openSans(color: Colors.white, ),
               decoration: InputDecoration(
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.only(top: 14.0),
@@ -63,7 +64,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             height: 60.0,
             child: TextField(
               keyboardType: TextInputType.phone,
-              style: TextStyle(color: Colors.white, fontFamily: 'OpenSans'),
+              style: GoogleFonts.openSans(color: Colors.white, ),
               decoration: InputDecoration(
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.only(top: 14.0),
@@ -99,7 +100,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             height: 60.0,
             child: TextField(
               keyboardType: TextInputType.emailAddress,
-              style: TextStyle(color: Colors.white, fontFamily: 'OpenSans'),
+              style: GoogleFonts.openSans(color: Colors.white, ),
               decoration: InputDecoration(
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.only(top: 14.0),
@@ -135,7 +136,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             height: 60.0,
             child: TextField(
               keyboardType: TextInputType.visiblePassword,
-              style: TextStyle(color: Colors.white, fontFamily: 'OpenSans'),
+              style: GoogleFonts.openSans(color: Colors.white, ),
               decoration: InputDecoration(
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.only(top: 14.0),
@@ -171,7 +172,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             height: 60.0,
             child: TextField(
               keyboardType: TextInputType.visiblePassword,
-              style: TextStyle(color: Colors.white, fontFamily: 'OpenSans'),
+              style: GoogleFonts.openSans(color: Colors.white, ),
               decoration: InputDecoration(
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.only(top: 14.0),
@@ -202,9 +203,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
         color: Colors.white,
         child: Text(
           'REGISTER',
-          style: TextStyle(
+          style: GoogleFonts.openSans(
               color: Color(0xFF527DAA),
-              fontFamily: 'OpenSans',
               fontWeight: FontWeight.bold,
               fontSize: 18.0,
               letterSpacing: 1.5),
@@ -217,7 +217,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GestureDetector(
-        onTap: ()=> FocusScope.of(context).unfocus(),
+        onTap: () => FocusScope.of(context).unfocus(),
         child: Stack(
           children: <Widget>[
             Container(
@@ -250,11 +250,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   children: <Widget>[
                     Text(
                       'Sign Up',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30.0,
-                          fontFamily: 'OpenSans'),
+                      style: GoogleFonts.openSans(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30.0,
+                      ),
                     ),
                     SizedBox(
                       height: 30.0,
@@ -266,8 +266,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     _buildConfirmPassTF(),
                     _buildRegisterBtn(),
                     InkWell(
-                      onTap: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext ctx){
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext ctx) {
                           return LoginScreen();
                         }));
                       },
@@ -276,15 +277,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           children: [
                             TextSpan(
                               text: 'Have an Account? ',
-                              style: TextStyle(
+                              style: GoogleFonts.openSans(
                                   color: Colors.white,
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.w400),
                             ),
-
                             TextSpan(
                               text: 'Sign in',
-                              style: TextStyle(
+                              style: GoogleFonts.openSans(
                                   color: Colors.white,
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold),

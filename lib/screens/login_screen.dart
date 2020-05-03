@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_practice_app/utils/utils.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -27,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
           height: 60.0,
           child: TextField(
             keyboardType: TextInputType.emailAddress,
-            style: TextStyle(color: Colors.white, fontFamily: 'OpenSans'),
+            style: GoogleFonts.openSans(color: Colors.white, ),
             decoration: InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.only(top: 14.0),
@@ -62,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: TextField(
             obscureText: true,
 //            keyboardType: TextInputType.visiblePassword,
-            style: TextStyle(color: Colors.white, fontFamily: 'OpenSans'),
+            style: GoogleFonts.openSans(color: Colors.white),
             decoration: InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.only(top: 14.0),
@@ -132,12 +133,11 @@ class _LoginScreenState extends State<LoginScreen> {
         color: Colors.white,
         child: Text(
           'LOGIN',
-          style: TextStyle(
+          style: GoogleFonts.openSans(
               color: Color(0xFF527DAA),
               letterSpacing: 1.5,
               fontSize: 18.0,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'OpenSans'),
+              fontWeight: FontWeight.bold,),
         ),
         onPressed: () => print('Login Pressed'),
       ),
@@ -149,10 +149,9 @@ class _LoginScreenState extends State<LoginScreen> {
       children: <Widget>[
         Text(
           '- OR -',
-          style: TextStyle(
+          style: GoogleFonts.openSans(
               color: Colors.white,
-              fontWeight: FontWeight.w500,
-              fontFamily: 'OpenSans'),
+              fontWeight: FontWeight.w500,),
         ),
         SizedBox(
           height: 20.0,
@@ -190,14 +189,14 @@ class _LoginScreenState extends State<LoginScreen> {
         text: TextSpan(children: [
           TextSpan(
             text: 'Don\'t have an Account?',
-            style: TextStyle(
+            style: GoogleFonts.openSans(
                 color: Colors.white,
                 fontSize: 18.0,
                 fontWeight: FontWeight.w400),
           ),
           TextSpan(
             text: 'Sign Up',
-            style: TextStyle(
+            style: GoogleFonts.openSans(
                 color: Colors.white,
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold),
@@ -261,9 +260,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: <Widget>[
                       Text(
                         'Sign In',
-                        style: TextStyle(
+                        style: GoogleFonts.openSans(
                             color: Colors.white,
-                            fontFamily: 'OpenSans',
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold),
                       ),

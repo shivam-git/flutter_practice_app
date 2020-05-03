@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice_app/flight_ticket_app_ui/FlightScreen.dart';
 import 'package:flutter_practice_app/photo_search_app/photo_search_home.dart';
 import 'package:flutter_practice_app/screens/pet_home_screen.dart';
 import 'package:flutter_practice_app/screens/sign_up_screen.dart';
@@ -25,7 +26,7 @@ class _DashboardState extends State<Dashboard> {
             getListTile('Sign Up & Login Screen UI', SignUpScreen()),
             getListTile('Pet Adoption Screen UI', HomeScreen()),
             getListTile('PhotoSearch App', PhotoSearchHome()),
-//            getListTile('Course Pic App', Practice1()),
+            getListTile('Flight Ticket UI', FlightScreen()),
           ],
         ),
       ),
