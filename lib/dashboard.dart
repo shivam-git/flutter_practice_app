@@ -9,9 +9,7 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-
   int count;
-
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +25,12 @@ class _DashboardState extends State<Dashboard> {
             getListTile('Sign Up & Login Screen UI', SignUpScreen()),
             getListTile('Pet Adoption Screen UI', HomeScreen()),
             getListTile('PhotoSearch App', PhotoSearchHome()),
+//            getListTile('Course Pic App', Practice1()),
           ],
         ),
       ),
     );
   }
-
 
   getListTile(String title, Widget widget) {
     count = count + 1;
