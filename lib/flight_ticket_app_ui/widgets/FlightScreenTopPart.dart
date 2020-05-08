@@ -7,6 +7,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../FlightListing.dart';
 
+final _searchFieldController =
+    TextEditingController(text: AppStrings.locations[1]);
+
 class FlightScreenTopPart extends StatefulWidget {
   @override
   _FlightScreenTopPartState createState() => _FlightScreenTopPartState();
@@ -54,8 +57,7 @@ class _FlightScreenTopPartState extends State<FlightScreenTopPart> {
                         Radius.circular(30.0),
                       ),
                       child: TextField(
-                        controller: TextEditingController(
-                            text: AppStrings.locations[1]),
+                        controller: _searchFieldController,
                         style: AppColors.dropDownMenuStyle,
                         cursorColor: AppColors.firstColor,
                         decoration: InputDecoration(
@@ -68,10 +70,17 @@ class _FlightScreenTopPartState extends State<FlightScreenTopPart> {
                               child: InkWell(
                                 onTap: () {
                                   Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              FlightListing()));
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          FlightListingProvider(
+                                        fromLocation: AppStrings
+                                            .locations[selectedLocation],
+                                        toLocation: _searchFieldController.text,
+                                        child: FlightListing(),
+                                      ),
+                                    ),
+                                  );
                                 },
                                 child: Icon(
                                   Icons.search,

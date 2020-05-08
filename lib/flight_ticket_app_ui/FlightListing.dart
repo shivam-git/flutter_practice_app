@@ -3,6 +3,19 @@ import 'package:flutter_practice_app/flight_ticket_app_ui/res/colors.dart';
 import 'package:flutter_practice_app/flight_ticket_app_ui/widgets/FlightListingBottomPart.dart';
 import 'package:flutter_practice_app/flight_ticket_app_ui/widgets/FlightListingTopPart.dart';
 
+class FlightListingProvider extends InheritedWidget {
+  final String fromLocation, toLocation;
+
+  FlightListingProvider({this.fromLocation, this.toLocation, Widget child})
+      : super(child: child);
+
+  @override
+  bool updateShouldNotify(InheritedWidget oldWidget) => true;
+
+  static FlightListingProvider of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType(aspect: FlightListingProvider);
+}
+
 class FlightListing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,7 +30,7 @@ class FlightListing extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-              child: Column(
+        child: Column(
           children: <Widget>[
             FlightListingTopPart(),
             SizedBox(height: 10.0),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice_app/flight_ticket_app_ui/FlightListing.dart';
 import 'package:flutter_practice_app/flight_ticket_app_ui/res/colors.dart';
 import 'package:flutter_practice_app/flight_ticket_app_ui/res/strings.dart';
 import 'package:flutter_practice_app/flight_ticket_app_ui/widgets/custom_shape_clipper.dart';
@@ -39,12 +40,12 @@ class FlightListingTopPart extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            AppStrings.locations[0],
+                            FlightListingProvider.of(context).fromLocation,
                             style: GoogleFonts.oxygen(fontSize: 16.0),
                           ),
                           Divider(thickness: 1.0, color: Colors.grey),
                           Text(
-                            AppStrings.locations[1],
+                            FlightListingProvider.of(context).toLocation,
                             style: GoogleFonts.oxygen(
                                 fontSize: 16.0, fontWeight: FontWeight.bold),
                           ),
