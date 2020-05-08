@@ -5,6 +5,8 @@ import 'package:flutter_practice_app/flight_ticket_app_ui/widgets/choice_chip.da
 import 'package:flutter_practice_app/flight_ticket_app_ui/widgets/custom_shape_clipper.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../FlightListing.dart';
+
 class FlightScreenTopPart extends StatefulWidget {
   @override
   _FlightScreenTopPartState createState() => _FlightScreenTopPartState();
@@ -63,7 +65,19 @@ class _FlightScreenTopPartState extends State<FlightScreenTopPart> {
                             suffixIcon: Material(
                               elevation: 4.0,
                               borderRadius: BorderRadius.circular(30.0),
-                              child: Icon(Icons.search),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              FlightListing()));
+                                },
+                                child: Icon(
+                                  Icons.search,
+                                  color: Colors.black,
+                                ),
+                              ),
                             )),
                       ),
                     ),

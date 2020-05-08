@@ -11,11 +11,15 @@ class FlightScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomAppBar(),
-      body: Column(
-        children: <Widget>[
-          FlightScreenTopPart(),
-          flightScreenBottomPart,
-        ],
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: <Widget>[
+            FlightScreenTopPart(),
+            flightScreenBottomPart,
+            flightScreenBottomPart,
+          ],
+        ),
       ),
     );
   }
@@ -43,7 +47,7 @@ var flightScreenBottomPart = Column(
       ),
     ),
     Container(
-      margin: EdgeInsets.symmetric(vertical:20.0),
+      margin: EdgeInsets.symmetric(vertical: 20.0),
       height: 250.0,
       child: ListView(
         shrinkWrap: true,
